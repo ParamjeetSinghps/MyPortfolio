@@ -1,0 +1,209 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 170px;
+    
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 20px;
+}
+.nav-connect{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: linear-gradient(270deg, #00dbde 0%, #fc00ff 100%);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    gap:5px ;
+    cursor: pointer;
+
+}
+.nav-menu li img{
+    display: flex;
+    margin: auto;
+    
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
+}
+
+.nav-mob-close{
+    display: none;
+ }
+.nav-mob-open{
+    display: none;
+ }
+
+.logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 30px;
+  height: 60px;
+}
+
+.particle-text {
+  font-size: 42px;
+  font-weight: 800;
+  color: #00ffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #00ffff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+
+/* Generate different positions for particles */
+.particles .particle:nth-child(1) { --x: -20; --y: -20; }
+.particles .particle:nth-child(2) { --x: 20; --y: -15; }
+.particles .particle:nth-child(3) { --x: -15; --y: 15; }
+.particles .particle:nth-child(4) { --x: 15; --y: 20; }
+.particles .particle:nth-child(5) { --x: -25; --y: 10; }
+.particles .particle:nth-child(6) { --x: 25; --y: -10; }
+.particles .particle:nth-child(7) { --x: 10; --y: -25; }
+.particles .particle:nth-child(8) { --x: -10; --y: 25; }
+.particles .particle:nth-child(9) { --x: -30; --y: -5; }
+.particles .particle:nth-child(10) { --x: 30; --y: 5; }
+/* Add more variations for remaining particles... */
+
+.logo-wrapper:hover .particle-text {
+  animation: fadeOut 0.5s forwards;
+}
+
+.logo-wrapper:hover .particle {
+  animation: explode 1.5s ease-out forwards;
+}
+
+/* Add delay to particles */
+.particles .particle:nth-child(1) { animation-delay: 0s; }
+.particles .particle:nth-child(2) { animation-delay: 0.05s; }
+.particles .particle:nth-child(3) { animation-delay: 0.1s; }
+.particles .particle:nth-child(4) { animation-delay: 0.15s; }
+.particles .particle:nth-child(5) { animation-delay: 0.2s; }
+/* Add more delays for remaining particles... */
+
+.logo-small {
+  font-size: 24px;
+  margin-left: 8px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #00ffff, #ff3366);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes explode {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+  10% {
+    opacity: 1;
+  }
+  35% {
+    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+  }
+  65% {
+    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media(max-width:768px){
+    .navbar{
+       margin: 20px 50px; 
+    }
+    .nav-connect{
+        display: none;
+    }
+    .nav-mob-open{
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+    .nav-mob-close{
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+
+    }
+    .nav-menu{
+        position: fixed;
+        flex-direction: column;
+        align-items: start;
+        top: 0;
+        gap: 30px;
+        background-color: #1f0016;
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu li{
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+    .particle-text {
+        font-size: 32px;
+    }
+    .logo-small {
+        font-size: 18px;
+    }
+}

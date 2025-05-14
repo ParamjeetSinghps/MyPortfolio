@@ -1,0 +1,124 @@
+/* Define the gradient as a CSS variable at the root level for reusability */
+:root {
+    --primary-gradient: linear-gradient(270deg, #00dbde 0%, #fc00ff 100%);
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+    
+}
+.hero img{
+    margin-top: 80px;
+}
+.hero h1{
+    text-align: center;
+    width: 70%;
+    font-size: 90px;
+    font-weight: 600;
+}
+.hero h1 span{
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.hero p{
+    width:50%;
+    text-align: center;
+    font-family: 24px;
+    line-height: 40px;
+
+}
+.hero-action{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+.hero-connect{
+    padding: 25px 45px;
+    border-radius: 50px;
+   background: var(--primary-gradient);
+    cursor: pointer;
+
+}
+  
+.hero-resume{
+    padding: 25px 75px;
+    border-radius: 50px;
+    border: 2px solid white;
+    cursor: pointer;
+} 
+ .hero-connect:hover{
+    background: linear-gradient(270deg, #fc00ff 0%, #00dbde 100%);
+ }
+
+.hero-resume:hover{
+    border-color: #B415FF;
+
+} 
+.download-link {
+    text-decoration: none;
+    color: white;
+}
+@media(max-width:768px){
+
+    .hero img{
+        margin-top: 120px;
+        width: 260px;
+    }
+    .hero h1{
+       margin-top: 50px;
+        font-size: 50px;
+        width: 90%;
+    }
+    .hero p{
+        font-size: 18px;
+        line-height: 32px;
+        width: 60%;
+        margin: 10px 0px; 
+
+    }
+    .hero-action{
+        font-size: 18px;
+        gap: 16px;
+        font-weight: 500;
+        margin-bottom: 50px;
+    }
+    .hero-connect{
+        padding: 20px 30px;
+        border-radius: 40px;
+    }
+    .hero-resume{
+        padding: 20px 50px;
+        border-radius: 40px;
+    }
+}
+.dynamic-text {
+    display: inline-block;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.cursor {
+    display: inline-block;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
