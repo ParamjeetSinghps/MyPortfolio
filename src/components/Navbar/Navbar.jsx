@@ -1,10 +1,11 @@
 import React, { useRef, useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.svg';
+import theme_pattern from '../../assets/theme_pattern.svg';
 import underline from '../../assets/nav_underline.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import menu_open from '../../assets/menu_open.svg';
 import menu_close from '../../assets/menu_close.svg';
+
 const Navbar = () => {
   const [menu , setMenu] = useState('home');
   const menuRef =useRef();
@@ -19,17 +20,10 @@ const Navbar = () => {
     <div className='navbar'>
       <div className="logo">
         <div className="logo-wrapper">
-          <div className="particle-text">Paramjeet</div>
-          <div className="particles">
-            {[...Array(20)].map((_, i) => (
-              <div key={i} className="particle"></div>
-            ))}
-          </div>
+          <h1>Paramjeet</h1>
+          <img src={theme_pattern} alt="theme pattern" className="logo-pattern" />
         </div>
-        <span className="logo-small"></span>
       </div>
-      {/* <img src={logo} alt='logo'/>
-      <h1>PaRaMjeet</h1> */}
       <img src={menu_open} onClick={openMenu} alt="open" className='nav-mob-open' />
       <ul ref={menuRef} className='nav-menu'>
         <img src={menu_close} onClick={closeMenu} alt="close" className="nav-mob-close" />

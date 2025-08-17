@@ -59,106 +59,34 @@
 
 .logo-wrapper {
   position: relative;
-  width: 30px;
-  height: 60px;
+  display: inline-block;
+  margin-left: -20px;
 }
 
-.particle-text {
-  font-size: 42px;
-  font-weight: 800;
-  color: #00ffff;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.3s ease;
-}
-
-.particles {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.particle {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #00ffff;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-}
-
-/* Generate different positions for particles */
-.particles .particle:nth-child(1) { --x: -20; --y: -20; }
-.particles .particle:nth-child(2) { --x: 20; --y: -15; }
-.particles .particle:nth-child(3) { --x: -15; --y: 15; }
-.particles .particle:nth-child(4) { --x: 15; --y: 20; }
-.particles .particle:nth-child(5) { --x: -25; --y: 10; }
-.particles .particle:nth-child(6) { --x: 25; --y: -10; }
-.particles .particle:nth-child(7) { --x: 10; --y: -25; }
-.particles .particle:nth-child(8) { --x: -10; --y: 25; }
-.particles .particle:nth-child(9) { --x: -30; --y: -5; }
-.particles .particle:nth-child(10) { --x: 30; --y: 5; }
-/* Add more variations for remaining particles... */
-
-.logo-wrapper:hover .particle-text {
-  animation: fadeOut 0.5s forwards;
-}
-
-.logo-wrapper:hover .particle {
-  animation: explode 1.5s ease-out forwards;
-}
-
-/* Add delay to particles */
-.particles .particle:nth-child(1) { animation-delay: 0s; }
-.particles .particle:nth-child(2) { animation-delay: 0.05s; }
-.particles .particle:nth-child(3) { animation-delay: 0.1s; }
-.particles .particle:nth-child(4) { animation-delay: 0.15s; }
-.particles .particle:nth-child(5) { animation-delay: 0.2s; }
-/* Add more delays for remaining particles... */
-
-.logo-small {
-  font-size: 24px;
-  margin-left: 8px;
-  font-weight: 600;
-  background: linear-gradient(90deg, #00ffff, #ff3366);
+.logo-wrapper h1 {
+  font-size: 32px;
+  font-weight: 700;
+  background: linear-gradient(270deg, #DF8908 -5.09%, #B415FF 106.28%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
-@keyframes fadeOut {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes explode {
-  0% {
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
-  10% {
-    opacity: 1;
-  }
-  35% {
-    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
-  }
-  65% {
-    transform: translate(calc(var(--x) * 1px), calc(var(--y) * 1px));
-  }
-  100% {
-    opacity: 0;
-    transform: translate(-50%, -50%);
-  }
+.logo-pattern {
+  position: absolute;
+  top: 60%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  z-index: 1;
+  opacity: 0.4;
 }
 
 @media(max-width:768px){
@@ -200,10 +128,18 @@
         flex-direction: row;
         gap: 20px;
     }
-    .particle-text {
-        font-size: 32px;
+    .logo-wrapper {
+        margin-left: -10px;
     }
-    .logo-small {
+    .logo-wrapper h1 {
         font-size: 18px;
+        letter-spacing: 0.5px;
+    }
+    .logo-pattern {
+        width: 15px;
+        height: 15px;
+        top: 55%;
+        left: 65%;
+        opacity: 0.5;
     }
 }

@@ -1,10 +1,34 @@
 *{
   margin:0;
   padding: 0;
+  box-sizing: border-box;
 }
 body{
   height: 100vh;
   background: #161513;
   color: #fff;
   font-family: 'outfit';
+  overflow-x: hidden;
+}
+
+/* Global mobile responsive fixes */
+@media(max-width:768px){
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  
+  /* Ensure all containers are properly centered */
+  .hero, .about, .services, .mywork, .experience, .contact, .footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  /* Fix navbar mobile layout */
+  .navbar {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }

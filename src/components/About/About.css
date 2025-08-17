@@ -5,6 +5,10 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
 } 
 .about-title{
     position: relative;
@@ -135,14 +139,17 @@
 
 @media(max-width:768px){
     .about{
-        gap: 80px;
-        margin: 50px 70px;
-        align-items: start;
+        gap: 50px;
+        margin: 50px auto;
+        padding: 0 20px;
+        align-items: center;
         text-align: center;
+        width: 100%;
     }
     .about-title h1{
         font-size: 50px;
         padding: 0;
+        text-align: center;
     }
     .about-title img {
         width: 130px;
@@ -150,29 +157,41 @@
     }
     .about-sections{
         flex-direction: column;
+        gap: 40px;
+        width: 100%;
     }
     .about-left{
         display: none;
     }
+    .about-right{
+        gap: 40px;
+        width: 100%;
+    }
     .about-para{
         font-size: 18px;
         line-height: 32px;
+        text-align: center;
     }
-    .about-skill{
-        gap: 20px;
-        align-items: center;
+    .about-skills{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        width: 100%;
     }
-    .about-skill p{
-        font-size: 20px;
+    .skill-item img {
+        width: 40px;
+        height: 40px;
     }
-    .about-skill hr{
-        height: 6px;
+    .skill-item p {
+        font-size: 12px;
     }
     .about-achievements{
         justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
     }
     .about-achievement{
         gap: 10px;
+        min-width: 120px;
     }
     .about-achievement h1{
         font-size: 34px;

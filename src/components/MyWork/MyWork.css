@@ -5,6 +5,10 @@
     justify-content: center;
     gap: 80px;
     margin: 80px 170px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
 }
 .mywork-title{
    position: relative;
@@ -25,6 +29,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 40px;
+    width: 100%;
 }
 
 .work-item {
@@ -129,21 +134,25 @@
 @media(max-width:768px){
     .mywork{
         gap: 50px;
-        margin: 50px 70px;
-        align-items: start;
+        margin: 50px auto;
+        padding: 0 20px;
+        align-items: center;
+        width: 100%;
     }
     .mywork-title h1{
         padding: 0;
         font-size: 50px;
         font-weight: 600;
+        text-align: center;
     }
     .mywork-title img{
         width: 130px;
         margin-right: -20px;
     }
     .mywork-container{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 30px;
+        width: 100%;
     }
     .work-item img{
         width: 100%;
